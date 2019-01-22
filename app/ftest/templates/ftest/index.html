@@ -1,0 +1,14 @@
+<h1>Post List </h1>
+{% if posts %}
+   <ul>
+   {% for post in posts %}
+     <li>{{ post.body }} ----- <a href="{% url 'ftest:edit' post.id %}">Edit Post</a>------<a href="{% url 'ftest:delete' post.id %}">Delete Post </a></li>
+   {% endfor %}
+</ul>
+{% else %}
+   No Post Found.
+{% endif %}
+<br />
+<br />
+<br />
+<a href="{% url 'ftest:create' %}">Add Post</a>
