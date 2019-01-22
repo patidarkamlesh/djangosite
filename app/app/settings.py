@@ -36,6 +36,7 @@ if DEBUG and os.getenv('SL_PUBLIC_URL'):
 # Application definition
 
 INSTALLED_APPS = [
+    'mysite.apps.MysiteConfig',
     'ftest.apps.FtestConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

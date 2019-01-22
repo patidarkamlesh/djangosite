@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     path('ftest/', include('ftest.urls')),
-    path('', RedirectView.as_view(url='/polls/'))
+    path('mysite/', include('mysite.urls')),
+    path('', RedirectView.as_view(url='/mysite/'))
 ]
