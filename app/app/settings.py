@@ -36,6 +36,8 @@ if DEBUG and os.getenv('SL_PUBLIC_URL'):
 # Application definition
 
 INSTALLED_APPS = [
+    'wizdjango.apps.WizdjangoConfig',
+    'jquerydj.apps.JquerydjConfig',
     'mysite.apps.MysiteConfig',
     'ftest.apps.FtestConfig',
     'polls.apps.PollsConfig',
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'formtools',
 ]
 
 MIDDLEWARE = [

@@ -22,5 +22,7 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('ftest/', include('ftest.urls')),
     path('mysite/', include('mysite.urls')),
+    path('jquerydj/', include('jquerydj.urls')),
+    path('wizdjango/', include('wizdjango.urls')),
     path('', RedirectView.as_view(url='/mysite/'))
 ]

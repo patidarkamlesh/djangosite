@@ -7,12 +7,11 @@ def index(request):
     if request.method == 'POST':
         first_name = request.POST.get('fname')
         last_name  = request.POST.get('lname')
-        joke = getJoke(first_name, last_name)
-        return render(request, 'mysite/index.html', {'joker' : joke})
     else:
-        joke = getJoke('Kamlesh', 'Patidar')
-        return render(request, 'mysite/index.html', {'joker' : joke})
-
+        first_name = 'Kamlesh'
+        last_name  = 'Patidar'
+    joke = getJoke(first_name, last_name)
+    return render(request, 'mysite/index.html', {'joker' : joke})
 
 def mycontact(request):
     if request.method == 'POST':
